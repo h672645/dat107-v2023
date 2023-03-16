@@ -15,7 +15,7 @@ CREATE TABLE person
 (
     id integer NOT NULL,
     navn VARCHAR(30) NOT NULL,
-    CONSTRAINT person_pk PRIMARY KEY (id)
+    PRIMARY KEY (id)
 );
 
 INSERT INTO
@@ -26,3 +26,7 @@ VALUES
     (1003, 'Donald Duck');
 
 select * from person;
+
+
+
+
