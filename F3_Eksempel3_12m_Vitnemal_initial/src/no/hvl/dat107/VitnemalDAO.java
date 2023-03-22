@@ -18,12 +18,12 @@ public class VitnemalDAO {
     
     /* --------------------------------------------------------------------- */
 
-    public /*TODO*/void hentVitnemalForStudent(/*TODO*/) {
+    public Vitnemal hentVitnemalForStudent(int snr) {
         
         EntityManager em = emf.createEntityManager();
         try {
         	
-        	/*TODO*/
+        	return em.find(Vitnemal.class, snr);
         	
         } finally {
             em.close();

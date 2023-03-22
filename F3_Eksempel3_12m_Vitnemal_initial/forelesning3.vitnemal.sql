@@ -4,7 +4,7 @@ DROP SCHEMA IF EXISTS forelesning3 CASCADE;
 CREATE SCHEMA forelesning3;
 SET search_path TO forelesning3;
     
-CREATE TABLE Vitnemal
+CREATE TABLE vitnemal
 (
 	StudNr INTEGER,
 	Studiestart DATE NOT NULL,
@@ -41,3 +41,9 @@ VALUES
     ('DAT107', '2022-05-30', 'B', 234567);
     
 
+
+    
+    
+    
+    
+    
