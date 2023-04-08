@@ -6,7 +6,7 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(schema = "f2person")
+@Table(schema = "forelesning1")
 @NamedQuery(name = "hentAllePersoner", query ="SELECT p FROM Person as p order by p.id")
 public class Person {
 	

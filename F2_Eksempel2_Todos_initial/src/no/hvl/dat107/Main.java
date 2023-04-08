@@ -1,5 +1,6 @@
 package no.hvl.dat107;
 
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -24,7 +25,11 @@ public class Main {
 		 */
 
 		// a) Hente ut alle todos 
+		List<Todo> todos = todoDAO.finnAlleTodos();
+		pauseOgSjekkPgAdmin(todos, "");
+		
 		// b) Hente ut todo med pk=2
+		todoDAO.finnTodoMedPk();
 		// c.i)   Hente ut SINGLE todo med tekst="Handle mat" 
 		// c.ii)  Hente ut SINGLE todo med tekst="Vaske bilen" (som ikke finnes) 
 		// c.iii) Hente ut LISTE av todos med tekst="Handle mat" 
@@ -39,10 +44,10 @@ public class Main {
 	
 	private static Scanner scanner = new Scanner(System.in);
 	
-	private static void pauseOgSjekkPgAdmin(String sisteAction) {
-		System.out.println("\n" + sisteAction);
+	private static void pauseOgSjekkPgAdmin(List<Todo> todos, String sisteAction) {
+		//System.out.println("\n" + sisteAction);
 		System.out.println("\nTodo-objekter i persistence context nå:");
-//		todoDAO.finnAlleTodos().forEach(System.out::println);
+		todos.forEach(System.out::println);
 		System.out.println("\nSjekk om det ser likt ut i PgAdmin.");
 		System.out.println("\nTrykk \"ENTER\" for å fortsette programmet ...");
 		scanner.nextLine();
