@@ -1,6 +1,8 @@
 package no.hvl.dat107;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
@@ -10,7 +12,9 @@ import jakarta.persistence.Table;
 @NamedQuery(name = "hentAllePersoner", query ="SELECT p FROM Person as p order by p.id")
 public class Person {
 	
-	@Id	private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String navn;
 	
 	public Person() {}
